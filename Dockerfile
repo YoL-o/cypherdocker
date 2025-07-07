@@ -7,7 +7,7 @@ RUN apt-get update && \
     webp && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/Dark-Xploit/CypherX.git /app
+RUN git clone https://github.com/YoL-o/CypherX.git /app
 
 WORKDIR /app
 
