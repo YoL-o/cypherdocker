@@ -5,8 +5,7 @@ RUN apt-get update && \
     ffmpeg \
     imagemagick \
     webp && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/Dark-Xploit/CypherX.git /app
 
@@ -18,4 +17,4 @@ ENV NODE_ENV=production
 
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
+CMD sh -c "node keepalive.js & npm run start"
